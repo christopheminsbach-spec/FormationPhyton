@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+Historique
+{% endblock %}
+
+
+
+{% block content %}
+
+
+<h1 class="text-3xl font-bold mb-8">
+
+Historique des saisies
+
+</h1>
+
+
+
+{% if signatures %}
+
+
+{% for s in signatures %}
+
+
+<div class="bg-white shadow rounded-xl p-6 mb-5">
+
+
+<h2 class="text-2xl font-bold">
+
+{{ s.prenom }} {{ s.nom }}
+
+</h2>
+
+
+<p>
+Poste : {{ s.poste }}
+</p>
+
+
+<p>
+Téléphone : {{ s.telephone }}
+</p>
+
+
+<p>
+Email : {{ s.email }}
+</p>
+
+
+</div>
+
+
+{% endfor %}
+
+
+
+{% else %}
+
+
+<p>
+Aucune donnée enregistrée.
+</p>
+
+
+{% endif %}
+
+
+
+{% endblock %}

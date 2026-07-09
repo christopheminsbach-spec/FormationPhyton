@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+Créer une signature
+{% endblock %}
+
+
+{% block content %}
+
+
+<h1 class="text-3xl font-bold mb-8">
+
+Générateur de signature
+
+</h1>
+
+
+
+<form method="POST"
+class="bg-white p-8 rounded-xl shadow space-y-4">
+
+
+<input
+name="nom"
+placeholder="Nom"
+class="border p-3 w-full rounded">
+
+
+<input
+name="prenom"
+placeholder="Prénom"
+class="border p-3 w-full rounded">
+
+
+<input
+name="poste"
+placeholder="Poste"
+class="border p-3 w-full rounded">
+
+
+<input
+name="telephone"
+placeholder="Téléphone"
+class="border p-3 w-full rounded">
+
+
+<input
+name="email"
+placeholder="Email"
+class="border p-3 w-full rounded">
+
+
+
+<button
+class="bg-blue-600 text-white px-6 py-3 rounded">
+
+Créer signature
+
+</button>
+
+
+</form>
+
+
+{% endblock %}
