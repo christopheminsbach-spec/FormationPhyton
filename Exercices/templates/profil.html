@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+</head>
+<body>
+
+    <h1>Hello {{ first_name }}</h1>
+
+    <p>Age: {{ age }} years old</p>
+    <p>City: {{ city }}</p>
+
+    {% if connected %}
+        <p>You are connected.</p>
+    {% else %}
+        <p>You are not connected.</p>
+    {% endif %}
+
+</body>
+</html>

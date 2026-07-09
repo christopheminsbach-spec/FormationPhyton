@@ -1,21 +1,48 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{% endblock %}</title>
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>
+{% block title %}
+Signature App
+{% endblock %}
+</title>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+
 </head>
 
-<body class="bg-gray-100">
 
 
-<nav class="bg-white shadow p-5 mb-10">
+<body class="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white">
+
+
+<nav class="backdrop-blur-xl bg-white/10 border-b border-white/20 shadow-lg">
+
+<div class="max-w-6xl mx-auto px-5 py-5 flex justify-between items-center">
+
+
+<h1 class="text-2xl font-bold">
+
+✉️ Signature App
+
+</h1>
+
+
+
+<div class="space-x-4">
 
 
 <a href="{{ url_for('index') }}"
-class="mr-5 text-blue-600">
+class="hover:text-blue-300 transition">
 
 Accueil
 
@@ -23,26 +50,35 @@ Accueil
 
 
 <a href="{{ url_for('historique') }}"
-class="text-blue-600">
+class="hover:text-blue-300 transition">
 
 Historique
 
 </a>
 
 
+</div>
+
+
+</div>
+
 </nav>
 
 
 
-<div class="max-w-4xl mx-auto">
+
+<main class="max-w-6xl mx-auto px-5 py-10">
+
 
 {% block content %}
 
 {% endblock %}
 
 
-</div>
+</main>
 
 
 </body>
+
+
 </html>

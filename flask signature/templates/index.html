@@ -6,61 +6,162 @@ Créer une signature
 {% endblock %}
 
 
+
 {% block content %}
 
 
-<h1 class="text-3xl font-bold mb-8">
 
-Générateur de signature
-
-</h1>
+<div class="max-w-xl mx-auto">
 
 
+<div class="bg-white/10 backdrop-blur-xl 
+border border-white/20 
+rounded-3xl 
+shadow-2xl 
+p-8">
 
-<form method="POST"
-class="bg-white p-8 rounded-xl shadow space-y-4">
+
+<h2 class="text-3xl font-bold mb-8 text-center">
+
+🚀 Générer votre signature
+
+</h2>
+
+
+
+
+<form method="POST" class="space-y-5">
 
 
 <input
 name="nom"
 placeholder="Nom"
-class="border p-3 w-full rounded">
+class="
+w-full
+bg-white/20
+border
+border-white/30
+rounded-xl
+px-5
+py-3
+placeholder-gray-300
+focus:ring-2
+focus:ring-blue-400
+outline-none
+">
 
 
 <input
 name="prenom"
 placeholder="Prénom"
-class="border p-3 w-full rounded">
+class="
+w-full
+bg-white/20
+border
+border-white/30
+rounded-xl
+px-5
+py-3
+placeholder-gray-300
+focus:ring-2
+focus:ring-blue-400
+outline-none
+">
+
 
 
 <input
 name="poste"
 placeholder="Poste"
-class="border p-3 w-full rounded">
+class="
+w-full
+bg-white/20
+border
+border-white/30
+rounded-xl
+px-5
+py-3
+placeholder-gray-300
+focus:ring-2
+focus:ring-blue-400
+outline-none
+">
+
 
 
 <input
 name="telephone"
 placeholder="Téléphone"
-class="border p-3 w-full rounded">
+class="
+w-full
+bg-white/20
+border
+border-white/30
+rounded-xl
+px-5
+py-3
+placeholder-gray-300
+focus:ring-2
+focus:ring-blue-400
+outline-none
+">
+
 
 
 <input
 name="email"
 placeholder="Email"
-class="border p-3 w-full rounded">
+class="
+w-full
+bg-white/20
+border
+border-white/30
+rounded-xl
+px-5
+py-3
+placeholder-gray-300
+focus:ring-2
+focus:ring-blue-400
+outline-none
+">
+
+
 
 
 
 <button
-class="bg-blue-600 text-white px-6 py-3 rounded">
 
-Créer signature
+class="
+w-full
+bg-gradient-to-r
+from-blue-500
+to-indigo-600
+hover:scale-105
+transition
+duration-300
+rounded-xl
+py-4
+font-bold
+text-lg
+shadow-lg
+">
+
+
+✨ Créer la signature
+
 
 </button>
 
 
+
 </form>
+
+
+</div>
+
+
+</div>
+
 
 
 {% endblock %}

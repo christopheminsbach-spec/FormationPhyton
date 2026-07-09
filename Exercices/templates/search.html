@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de recherche</title>
+
+</head>
+<body>
+    {% extends "base.html" %}
+
+{% block title %}
+Search
+{% endblock %}
+
+{% block content %}
+
+<h1>Search</h1>
+
+<form method="GET">
+    <label for="keyword">Keyword:</label>
+    <input id="keyword" type="text" name="keyword" value="{{ query }}" title="Enter search keyword" placeholder="Enter keyword">
+    <button type="submit">Search</button>
+</form>
+
+{% if query %}
+    <p>You searched for: <strong>{{ query }}</strong></p>
+{% endif %}
+
+<ul>
+    {% for product in results %}
+        <li>{{ product }}</li>
+    {% else %}
+        <li>No products found.</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
+</body>
+</html>

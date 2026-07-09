@@ -10,21 +10,35 @@ Historique
 {% block content %}
 
 
-<h1 class="text-3xl font-bold mb-8">
 
-Historique des saisies
+<h1 class="text-4xl font-bold mb-10 text-center">
+
+📋 Historique
 
 </h1>
 
 
 
-{% if signatures %}
+
+<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+
 
 
 {% for s in signatures %}
 
 
-<div class="bg-white shadow rounded-xl p-6 mb-5">
+
+<div class="
+bg-white/10
+backdrop-blur-xl
+border
+border-white/20
+rounded-3xl
+p-6
+shadow-xl
+hover:scale-105
+transition
+">
 
 
 <h2 class="text-2xl font-bold">
@@ -34,25 +48,35 @@ Historique des saisies
 </h2>
 
 
-<p>
-Poste : {{ s.poste }}
+<p class="mt-3 text-blue-300">
+
+💼 {{ s.poste }}
+
 </p>
 
 
-<p>
-Téléphone : {{ s.telephone }}
+<p class="mt-2">
+
+📞 {{ s.telephone }}
+
 </p>
 
 
-<p>
-Email : {{ s.email }}
+<p class="break-all">
+
+✉️ {{ s.email }}
+
 </p>
 
+
+<div class="mt-5 text-sm text-gray-300">
+
+ID : {{ s.id }}
 
 </div>
 
 
-{% endfor %}
+</div>
 
 
 
@@ -60,11 +84,15 @@ Email : {{ s.email }}
 
 
 <p>
-Aucune donnée enregistrée.
+Aucune signature enregistrée.
 </p>
 
 
-{% endif %}
+{% endfor %}
+
+
+
+</div>
 
 
 

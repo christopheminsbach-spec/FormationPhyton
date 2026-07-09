@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche</title>
+</head>
+<body>
+    <h1>Recherche</h1>
+
+    <form method="get" action="/recherche">
+        <label for="query">Votre recherche</label>
+        <input type="text" id="query" name="query" value="{{ query }}">
+
+        <button type="submit">Rechercher</button>
+    </form>
+
+    {% if query %}
+        <p>Vous avez recherché : {{ query }}</p>
+    {% else %}
+        <p>Aucune recherche pour le moment.</p>
+    {% endif %}
+</body>
+</html>

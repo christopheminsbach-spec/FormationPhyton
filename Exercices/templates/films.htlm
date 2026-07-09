@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste de films</title>
+</head>
+<body>
+
+<h1>Movies</h1>
+
+<ul>
+    {% for movie in movies %}
+        <li>
+            {{ movie.title }} ({{ movie.year }}) - {{ movie.rating }}/10
+        </li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>

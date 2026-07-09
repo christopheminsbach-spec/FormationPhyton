@@ -176,7 +176,7 @@ def index():
 
 
         return render_template(
-            "signature.html",
+            "signatures.html",
             signature=signature
         )
 
