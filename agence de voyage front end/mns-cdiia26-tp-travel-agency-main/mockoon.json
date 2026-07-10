@@ -1,0 +1,234 @@
+{
+  "uuid": "e7a3b8a1-08fe-4c0f-9531-9c164f27543f",
+  "lastMigration": 33,
+  "name": "Mockoon",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3053,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "29524376-d4b1-4ac3-8adc-9e1cd5d3533a",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "trips",
+      "responses": [
+        {
+          "uuid": "fa3c29f7-10db-488c-90e2-32575dcfcbd8",
+          "body": "[\n  {\n    \"id\": 1,\n    \"title\": \"Week-end à Rome\",\n    \"destination\": \"Rome\",\n    \"country\": \"Italie\",\n    \"description\": \"Découvrez Rome le temps d'un week-end entre histoire, gastronomie et dolce vita.\",\n    \"price\": 349.99,\n    \"duration_days\": 3,\n    \"travel_type\": \"city-trip\",\n    \"image_url\": \"https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0\",\n    \"is_available\": true\n  }\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "b15ce969-9fdb-43b3-9acc-17db55b23384",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "trips",
+      "responses": [
+        {
+          "uuid": "06f63586-d07a-4237-95ee-3f10e5ad6041",
+          "body": "{\n  \"id\": 2,\n  \"title\": \"Séjour à Lisbonne\",\n  \"destination\": \"Lisbonne\",\n  \"country\": \"Portugal\",\n  \"description\": \"Un séjour lumineux entre tramways, belvédères et pasteis de nata.\",\n  \"price\": 429.99,\n  \"duration_days\": 4,\n  \"travel_type\": \"city-trip\",\n  \"image_url\": \"https://images.unsplash.com/photo-1585208798174-6cedd86e019a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0\",\n  \"is_available\": true\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "42b4300e-701f-4e76-b2ca-eb7c2302fcd3",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "trips/{id}",
+      "responses": [
+        {
+          "uuid": "48dfb69f-d05d-42a8-baba-5a1a9174c456",
+          "body": "{\n  \"id\": 2,\n  \"title\": \"Séjour à Lisbonne\",\n  \"destination\": \"Lisbonne\",\n  \"country\": \"Portugal\",\n  \"description\": \"Un séjour lumineux entre tramways, belvédères et pasteis de nata.\",\n  \"price\": 429.99,\n  \"duration_days\": 4,\n  \"travel_type\": \"city-trip\",\n  \"image_url\": \"https://images.unsplash.com/photo-1585208798174-6cedd86e019a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0\",\n  \"is_available\": true\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "d7c7ac05-4a96-44ce-ab1e-75caece0d0ef",
+      "type": "http",
+      "documentation": "",
+      "method": "delete",
+      "endpoint": "trips/{id}",
+      "responses": [
+        {
+          "uuid": "d3f5a58e-ca90-41f8-9ea8-165118c706ca",
+          "body": "",
+          "latency": 0,
+          "statusCode": 204,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "e24d5e2f-2218-4dee-b595-7ed5585686a9",
+      "type": "http",
+      "documentation": "",
+      "method": "put",
+      "endpoint": "trips/{id}",
+      "responses": [
+        {
+          "uuid": "032019c5-7f49-4aef-bfea-1ed6bc8f9bae",
+          "body": "{\n  \"id\": 2,\n  \"title\": \"Séjour à Lisbonne\",\n  \"destination\": \"Lisbonne\",\n  \"country\": \"Portugal\",\n  \"description\": \"Un séjour lumineux entre tramways, belvédères et pasteis de nata.\",\n  \"price\": 429.99,\n  \"duration_days\": 4,\n  \"travel_type\": \"city-trip\",\n  \"image_url\": \"https://images.unsplash.com/photo-1585208798174-6cedd86e019a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0\",\n  \"is_available\": true\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "29524376-d4b1-4ac3-8adc-9e1cd5d3533a"
+    },
+    {
+      "type": "route",
+      "uuid": "b15ce969-9fdb-43b3-9acc-17db55b23384"
+    },
+    {
+      "type": "route",
+      "uuid": "42b4300e-701f-4e76-b2ca-eb7c2302fcd3"
+    },
+    {
+      "type": "route",
+      "uuid": "d7c7ac05-4a96-44ce-ab1e-75caece0d0ef"
+    },
+    {
+      "type": "route",
+      "uuid": "e24d5e2f-2218-4dee-b595-7ed5585686a9"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [],
+  "callbacks": []
+}
