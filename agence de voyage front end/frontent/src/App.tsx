@@ -61,7 +61,7 @@ const createEmptyForm = (): TripFormState => ({
   description: "",
   price: "",
   durationDays: "",
-  travelType: "city-trip",
+  travelType: "city",
   imageUrl: "",
   isAvailable: true,
 });
@@ -72,7 +72,7 @@ const tripToFormState = (trip: Trip): TripFormState => ({
   country: trip.country,
   description: trip.description,
   price: String(trip.price),
-  durationDays: String(trip.duration_days),
+  durationDays: String(trip.duration),
   travelType: trip.travel_type,
   imageUrl: trip.image_url,
   isAvailable: trip.is_available,
@@ -122,14 +122,14 @@ const createTripInput = (formState: TripFormState): TripInput => {
   return {
     title: trimmedFormState.title,
     destination: trimmedFormState.destination,
-    country: trimmedFormState.country,
+    country: trimmedFormState.country.toUpperCase(),
     description: trimmedFormState.description,
     price,
-    duration_days: durationDays,
+    duration: durationDays,
     travel_type: trimmedFormState.travelType,
-    image_url: trimmedFormState.imageUrl,
+    image: trimmedFormState.imageUrl,
     is_available: trimmedFormState.isAvailable,
-  };
+};
 };
 
 const normalizeText = (value: string): string =>
@@ -201,7 +201,7 @@ const sortTrips = (trips: Trip[], sortOption: SortOption): Trip[] => {
   if (sortOption === "duration_asc") {
     return sortableTrips.sort(
       (firstTrip, secondTrip) =>
-        firstTrip.duration_days - secondTrip.duration_days,
+        firstTrip.duration - secondTrip.duration,
     );
   }
 
@@ -350,7 +350,15 @@ const App = (): React.JSX.Element => {
 
     const createdTrip: Trip = {
       id: getNextTripId(trips),
-      ...tripInput,
+      title: tripInput.title,
+      destination: tripInput.destination,
+      country: tripInput.country,
+      description: tripInput.description,
+      price: tripInput.price,
+      duration: tripInput.duration,
+      travel_type: tripInput.travel_type,
+      image_url: tripInput.image,
+      is_available: tripInput.is_available,
     };
     setTrips((currentTrips) => [...currentTrips, createdTrip]);
 
@@ -374,7 +382,15 @@ const App = (): React.JSX.Element => {
 
     const updatedTrip: Trip = {
       id,
-      ...tripInput,
+      title: tripInput.title,
+      destination: tripInput.destination,
+      country: tripInput.country,
+      description: tripInput.description,
+      price: tripInput.price,
+      duration: tripInput.duration,
+      travel_type: tripInput.travel_type,
+      image_url: tripInput.image,
+      is_available: tripInput.is_available,
     };
     setTrips((currentTrips) =>
       currentTrips.map((trip) =>
@@ -664,7 +680,7 @@ const App = (): React.JSX.Element => {
                           {currencyFormatter.format(trip.price)}
                         </p>
                         <p className="text-xs text-stone-500">
-                          {trip.duration_days} jours
+                          {trip.duration} jours
                         </p>
                       </div>
                     </div>
@@ -704,7 +720,7 @@ const App = (): React.JSX.Element => {
                   <div className="rounded-md bg-stone-100 p-3">
                     <dt className="text-stone-500">Durée</dt>
                     <dd className="font-semibold text-stone-950">
-                      {selectedTrip.duration_days} jours
+                      {selectedTrip.duration} jours
                     </dd>
                   </div>
                   <div className="rounded-md bg-stone-100 p-3">
@@ -961,5 +977,7 @@ const App = (): React.JSX.Element => {
     </main>
   );
 };
+
+
 
 export default App;

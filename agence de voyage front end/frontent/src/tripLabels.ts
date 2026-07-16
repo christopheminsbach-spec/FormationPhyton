@@ -1,22 +1,18 @@
 import type { AvailabilityFilter, SortOption, TravelType } from './types'
 
 export const travelTypes: TravelType[] = [
-  'city-trip',
-  'beach',
-  'adventure',
-  'cultural',
-  'romantic',
-  'family',
-]
+  "city",
+  "nature",
+  "beach",
+  "adventure",
+];
 
-export const travelTypeLabels: Record<TravelType, string> = {
-  'city-trip': 'City trip',
-  beach: 'Plage',
-  adventure: 'Aventure',
-  cultural: 'Culture',
-  romantic: 'Romantique',
-  family: 'Famille',
-}
+export const travelTypeLabels = {
+  city: "City trip",
+  nature: "Nature",
+  beach: "Plage",
+  adventure: "Aventure",
+};
 
 export const availabilityLabels: Record<AvailabilityFilter, string> = {
   all: 'Toutes',

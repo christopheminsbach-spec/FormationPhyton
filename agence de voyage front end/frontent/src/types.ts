@@ -1,10 +1,8 @@
 export type TravelType =
-  | "city-trip"
+  | "city"
+  | "nature"
   | "beach"
-  | "adventure"
-  | "cultural"
-  | "romantic"
-  | "family";
+  | "adventure";
 
 export type Trip = {
   id: number;
@@ -13,13 +11,15 @@ export type Trip = {
   country: string;
   description: string;
   price: number;
-  duration_days: number;
+  duration: number;
   travel_type: TravelType;
   image_url: string;
   is_available: boolean;
 };
 
-export type TripInput = Omit<Trip, "id">;
+export type TripInput = Omit<Trip, "id" | "image_url"> & {
+  image: string;
+};
 
 export type AvailabilityFilter = "all" | "available" | "unavailable";
 
