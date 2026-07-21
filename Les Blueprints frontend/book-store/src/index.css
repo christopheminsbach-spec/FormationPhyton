@@ -1,0 +1,29 @@
+body {
+
+margin:0;
+
+background:#e5e2e2;
+
+color:white;
+
+font-family:
+Inter,
+sans-serif;
+
+}
+
+
+::-webkit-scrollbar {
+
+width:8px;
+
+}
+
+
+::-webkit-scrollbar-thumb {
+
+background:#D4A574;
+
+border-radius:20px;
+
+}
