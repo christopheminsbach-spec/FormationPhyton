@@ -1,0 +1,228 @@
+.navbar {
+
+
+    height:80px;
+
+
+    background:white;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:space-between;
+
+
+    padding:0 30px;
+
+
+    border-bottom:1px solid #E2E8F0;
+
+
+}
+
+
+
+/* Logo */
+
+
+.navbar-left h1 {
+
+
+    font-size:22px;
+
+
+    color:#0F172A;
+
+
+}
+
+
+
+
+/* Recherche */
+
+
+.navbar-search {
+
+
+    flex:1;
+
+
+    max-width:500px;
+
+
+    margin:0 40px;
+
+
+}
+
+
+
+.navbar-search input {
+
+
+    width:100%;
+
+
+    padding:12px 18px;
+
+
+    border-radius:12px;
+
+
+    border:1px solid #CBD5E1;
+
+
+    outline:none;
+
+
+    font-size:14px;
+
+
+}
+
+
+
+.navbar-search input:focus {
+
+
+    border-color:#2563EB;
+
+
+}
+
+
+
+
+
+/* Partie droite */
+
+
+.navbar-right {
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:15px;
+
+
+}
+
+
+
+
+
+.icon-button {
+
+
+    width:42px;
+
+
+    height:42px;
+
+
+    border:none;
+
+
+    background:#F1F5F9;
+
+
+    border-radius:50%;
+
+
+    cursor:pointer;
+
+
+    font-size:18px;
+
+
+}
+
+
+
+.icon-button:hover {
+
+
+    background:#E2E8F0;
+
+
+}
+
+
+
+
+
+/* Profil */
+
+
+.user-profile {
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:10px;
+
+
+}
+
+
+
+.avatar {
+
+
+    width:45px;
+
+
+    height:45px;
+
+
+    border-radius:50%;
+
+
+    background:#2563EB;
+
+
+    color:white;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    font-weight:bold;
+
+
+}
+
+
+
+.user-profile span {
+
+
+    display:block;
+
+
+    font-size:12px;
+
+
+    color:#64748B;
+
+
+}

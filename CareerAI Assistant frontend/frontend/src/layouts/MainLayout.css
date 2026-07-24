@@ -1,0 +1,47 @@
+.app-layout {
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:#F8FAFC;
+
+}
+
+
+
+/*
+Zone centrale
+Navbar + contenu + Sidebar
+*/
+
+.layout-body {
+
+
+    display:flex;
+
+    flex:1;
+
+
+}
+
+
+
+/*
+Contenu des pages
+*/
+
+.main-content {
+
+
+    flex:1;
+
+    padding:30px;
+
+
+    overflow:auto;
+
+
+}

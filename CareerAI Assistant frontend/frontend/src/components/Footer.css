@@ -1,0 +1,126 @@
+.footer {
+
+
+    min-height:80px;
+
+
+    background:#0F172A;
+
+
+    color:white;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:space-between;
+
+
+    padding:20px 30px;
+
+
+}
+
+
+
+/* Partie gauche */
+
+
+.footer-left h3 {
+
+
+    margin-bottom:5px;
+
+
+}
+
+
+
+.footer-left p {
+
+
+    color:#CBD5E1;
+
+
+    font-size:14px;
+
+
+}
+
+
+
+
+
+/* Centre */
+
+
+.footer-center {
+
+
+    color:#94A3B8;
+
+
+    font-size:14px;
+
+
+}
+
+
+
+
+
+
+/* Droite */
+
+
+.footer-right {
+
+
+    text-align:right;
+
+
+    color:#CBD5E1;
+
+
+    font-size:13px;
+
+
+}
+
+
+
+/* Responsive */
+
+
+@media(max-width:900px){
+
+
+    .footer {
+
+
+        flex-direction:column;
+
+
+        gap:15px;
+
+
+        text-align:center;
+
+
+    }
+
+
+
+    .footer-right {
+
+
+        text-align:center;
+
+
+    }
+
+
+}
